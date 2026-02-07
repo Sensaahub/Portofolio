@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
 });
 
 // Menjalankan server
-app.listen(port, () => {
+// Simpan server dalam variabel
+const server = app.listen(port, () => {
   console.log(`Website portofolio berjalan di http://localhost:${port}`);
 });
+
+// PENTING: Export app agar Vercel bisa membacanya
+module.exports = app;
