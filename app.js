@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const fs = require('fs'); // Modul untuk membaca file
 const port = process.env.PORT || 3000;
+
+// Panggil data langsung di sini (PENTING!)
+const myData = require('./data.json');
 
 // Mengatur EJS sebagai mesin tampilan
 app.set('view engine', 'ejs');
@@ -11,11 +13,7 @@ app.use(express.static('public'));
 
 // Rute Halaman Utama (Home)
 app.get('/', (req, res) => {
-    // 1. Baca data dari file data.json
-    const rawData = fs.readFileSync('data.json');
-    const myData = JSON.parse(rawData);
-
-    // 2. Kirim data tersebut ke file index.ejs
+    // Langsung kirim myData yang sudah di-load di atas
     res.render('index', { 
         data: myData 
     });
