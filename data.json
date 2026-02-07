@@ -1,0 +1,24 @@
+{
+  "nama": "Muhammad Rizky Adistiya",
+  "peran": "Mahasiswa Sistem Informasi CIC",
+  "bio": "Halo! Saya suka membuat website yang interaktif dan belajar teknologi baru setiap hari.",
+  "socials": [
+    { "platform": "Instagram", "url": "https://www.instagram.com/mhkyaa._/" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/budi" },
+    { "platform": "GitHub", "url": "https://github.com/Sensaahub" }
+  ],
+  "projects": [
+    {
+      "judul": "Photo PAS Maker",
+      "deskripsi": "website untuk membuat foto PAS otomatis dengn modal foto biasa",
+      "link_website": "photopasmaker.streamlit.app",
+      "link_github": "https://github.com/Sensaahub/Photo-PAS-Maker"
+    },
+    {
+        "judul": "Remover Backgound",
+        "deskripsi": "Website untuk menghapus background foto secara otomatis menggunakan teknologi AI.",
+        "link_website": "removerbg.streamlit.app",
+        "link_github": "https://github.com/Sensaahub/AI-Background-Remover"
+    }
+  ]
+}

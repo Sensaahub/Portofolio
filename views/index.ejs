@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio <%= data.nama %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="glass-container">
+        <header>
+            <div class="profile-glow">
+                <img src="/PAS Foto.jpeg" alt="Foto Profil" class="avatar">
+            </div>
+            <h1 class="gradient-text"><%= data.nama %></h1>
+            <p class="role"><i class="fas fa-code"></i> <%= data.peran %></p>
+            <p class="bio"><%= data.bio %></p>
+            
+            <div class="social-links">
+                <% data.socials.forEach(sosmed => { %>
+                    <a href="<%= sosmed.url %>" target="_blank" class="social-btn">
+                        <%= sosmed.platform %> <i class="fas fa-arrow-right"></i>
+                    </a>
+                <% }) %>
+            </div>
+        </header>
+
+        <hr class="divider">
+
+        <section class="projects">
+            <h2 class="section-title">Projek Yang Dilaksanakan</h2>
+            <div class="project-grid">
+                <% data.projects.forEach(projek => { %>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3><%= projek.judul %></h3>
+                            <p><%= projek.deskripsi %></p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="<%= projek.link_website %>" target="_blank" class="btn-primary">Live Demo</a>
+                            <a href="<%= projek.link_github %>" target="_blank" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
